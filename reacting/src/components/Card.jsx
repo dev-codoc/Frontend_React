@@ -8,6 +8,7 @@ export default function Card() {
       name: "Amazon basics",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam blanditiis doloremque, culpa beatae necessitatibus quisquamia facilis m!",
+      instock: true
     },
     {
       image:
@@ -15,6 +16,7 @@ export default function Card() {
       name: "Daily Objexts",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam blanditiis doloremque, culpa beatae necessitatibus quisquamia facilis m!",
+      instock: false
     },
     {
       image:
@@ -22,6 +24,7 @@ export default function Card() {
       name: "Apple",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam blanditiis doloremque, culpa beatae necessitatibus quisquamia facilis m!",
+      instock: false
     },
   ];
 
@@ -41,6 +44,7 @@ export default function Card() {
             <p className="text-xs mt-3">
               {elem.description}
             </p>
+            <button className={`px-4 py-2 ${elem.instock ? 'bg-blue-600' : 'bg-red-500'} text-xs rounded-md mt-2 text-white`}>{elem.instock ? "In stock":"Out of stock"}</button>
           </div>
         </div>
       ))}
